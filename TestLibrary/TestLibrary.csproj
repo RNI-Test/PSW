@@ -5,7 +5,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Authors>Marija</Authors>
     <Company>FTN</Company>
-    <PackageId>PSWOrg7TestLib</PackageId>
+    <PackageId>Org7TestLib</PackageId>
     <Version>1.0.0</Version>
   </PropertyGroup>
 

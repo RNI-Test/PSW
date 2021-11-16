@@ -42,9 +42,4 @@ jobs:
 
     - name: 'Push package'
       run: dotnet nuget push ${{ env.PACKAGE_OUTPUT_DIRECTORY }}/\*.nupkg -k ${{ env.NUGET_KEY }} -s ${{ env.NUGET_SOURCE_URL }} --skip-duplicate
-
-    - name: 'PushGithub'
-      run: dotnet nuget push ${{ env.PACKAGE_OUTPUT_DIRECTORY }}/\*.nupkg  -s ${{github.repository}} --no-symbols --skip-duplicate
-      env:
-        NUGET_AUTH_TOKEN: ${{ github.token }}
     
