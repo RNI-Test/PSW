@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+      <ItemGroup>
+          <_CustomFiles Include="..\commit-msg" />
+      </ItemGroup>
+      <Copy SourceFiles="@(_CustomFiles)" DestinationFolder="./../.git/hooks" />
+  </Target>
+
+</Project>
